@@ -1,0 +1,384 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// ì˙ñ{åÍ resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // ì˙ñ{åÍ resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// âpåÍ (ïƒçë) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RTF
+//
+
+IDR_RTF_ABOUT           RTF                     "About.rtf"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_WAIT_NOW DIALOGEX 0, 0, 120, 35
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Updating...",IDC_STATIC,40,13,38,8
+END
+
+IDD_DIALOG_UI DIALOGEX 0, 0, 219, 250
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "D3MkEntityTree Rev.7"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Locate directory of 'Doom3.exe' or 'Quake4.exe'",
+                    IDC_STATIC,7,7,156,8
+    EDITTEXT        IDC_EDIT_DOOM3,7,17,165,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_DOOM3,176,17,20,14
+    LTEXT           "Locate new directory for export",IDC_STATIC,7,32,103,8
+    EDITTEXT        IDC_EDIT_NEWFOLDER,7,42,165,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_NEWFOLDER,176,42,20,14
+    LTEXT           "Game selection:",IDC_STATIC,7,60,52,8
+    COMBOBOX        IDC_COMBO_GAMESEL,7,70,128,156,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Working flow:",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,
+                    7,85,205,8
+    CONTROL         "Make htmls (entityDef)",IDC_CHECK_MAKE_ENTITYDEF,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,95,205,10
+    CONTROL         "Make htmls (Mapobjects)",IDC_CHECK_MAKE_MAPOBJS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,105,205,10
+    CONTROL         "Generate files for Html Help Workshop",IDC_CHECK_MK_HHP,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,115,205,10
+    CONTROL         "Export entity models from map files (Experimental)",
+                    IDC_CHECK_ENTITY_MODEL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,125,205,10
+    CONTROL         "Opts for renderer:",IDC_STATIC,"Static",SS_SIMPLE | 
+                    WS_GROUP,7,139,205,8
+    CONTROL         "Select renderer target...",IDC_STATIC_SEL_RENDERER_TAR,
+                    "Static",SS_LEFTNOWORDWRAP | SS_NOTIFY | WS_GROUP,7,149,
+                    205,8
+    CONTROL         "Apply 'Gamma(3.0)'",IDC_CHECK_GAMMA,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,159,205,10
+    CONTROL         "Export MD5anim as avi files",IDC_CHECK_MAKE_AVI,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,169,205,10
+    CONTROL         "Idle process priority while extraction",IDC_CHECK_LOW,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,179,205,10
+    CONTROL         "Try ARB_fragment_program, if avail.",IDC_CHECK_GL01,
+                    "Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_DISABLED | 
+                    WS_TABSTOP,173,187,19,10
+    CONTROL         "Try ARB_texture_env_dot3, if avail.",IDC_CHECK_GL02,
+                    "Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_DISABLED | 
+                    WS_TABSTOP,193,187,19,10
+    CONTROL         "Select exported contents:",IDC_STATIC,"Static",
+                    SS_SIMPLE | WS_GROUP,7,194,205,8
+    CONTROL         "Select entityDef...",IDC_STATIC_SEL_ENTITYDEF,"Static",
+                    SS_LEFTNOWORDWRAP | SS_NOTIFY | WS_GROUP,7,204,205,8
+    LTEXT           "Select Mapobjects...",IDC_STATIC_SEL_MAPOBJS,7,214,205,
+                    8,SS_NOTIFY
+    DEFPUSHBUTTON   "Extract",IDOK,7,229,50,14
+    PUSHBUTTON      "Close",IDCANCEL,62,229,50,14
+    PUSHBUTTON      "Credits",IDC_BUTTON1,117,229,95,14
+END
+
+IDD_DIALOG_SEL_ENTITYDEF DIALOGEX 0, 0, 241, 175
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Select entityDef/Mapobjects"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Check the marks what you wanna export:",IDC_STATIC,7,7,
+                    135,8
+    CONTROL         "",IDC_TREE_SEL,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_LINESATROOT | TVS_SHOWSELALWAYS | WS_BORDER | 
+                    WS_TABSTOP,7,19,227,113
+    CONTROL         "Export only selected ones",IDC_CHECK_ONLY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,137,227,10
+    PUSHBUTTON      "Rebuild tree",IDC_BUTTON_REFRESH,7,154,50,14
+    DEFPUSHBUTTON   "OK",IDOK,131,154,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,184,154,50,14
+END
+
+IDD_DIALOG_ABOUT DIALOGEX 13, 13, 314, 169
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "About D3MkEntityTree"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,148,50,14
+    LTEXT           "D3MkEntityTree: 2005-11-08 Rev.7",IDC_STATIC,7,7,115,8
+    CONTROL         "",IDC_RICHEDIT_HINT,"RICHEDIT",TCS_BUTTONS | 
+                    TCS_FOCUSONBUTTONDOWN | TCS_MULTISELECT | WS_BORDER | 
+                    WS_VSCROLL | WS_TABSTOP,7,16,300,129
+END
+
+IDD_SEL_RENDERTAR DIALOGEX 0, 0, 194, 221
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Select renderer target"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Rendering target selection:",IDC_STATIC,7,32,88,8
+    COMBOBOX        IDC_COMBO_TAR,7,42,152,118,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Test selection for your environment:",IDC_STATIC,7,60,
+                    118,8
+    PUSHBUTTON      "Test",IDC_BUTTON_TEST,7,72,50,14
+    LTEXT           "Expected sample:",IDC_STATIC,7,90,58,8
+    CONTROL         116,IDC_STATIC_SAMPLE,"Static",SS_BITMAP | 
+                    SS_CENTERIMAGE,7,102,80,70,WS_EX_CLIENTEDGE
+    LTEXT           "Rendered sample:",IDC_STATIC,95,90,59,8
+    CONTROL         "",IDC_STATIC_PV,"Static",SS_BITMAP | SS_CENTERIMAGE,95,
+                    102,80,70,WS_EX_CLIENTEDGE
+    DEFPUSHBUTTON   "OK",IDOK,81,200,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,137,200,50,14
+    LTEXT           "If you have problem with rendered preview/thumbnail images, try to select another rendering target.",
+                    IDC_STATIC,7,7,180,16
+    LTEXT           "...",IDC_STATIC_DEV,7,177,180,16
+END
+
+IDD_DONE DIALOGEX 0, 0, 186, 79
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "D3MkEntityTree"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,67,58,50,14
+    LTEXT           "Export finished.\nClick the below link to browse html contents.",
+                    IDC_STATIC,7,7,172,21
+    LTEXT           "xxx",IDC_STATIC_HREF,7,35,172,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG_WAIT_NOW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 113
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 28
+    END
+
+    IDD_DIALOG_UI, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 212
+        VERTGUIDE, 172
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 243
+    END
+
+    IDD_DIALOG_SEL_ENTITYDEF, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 168
+    END
+
+    IDD_DIALOG_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 307
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 162
+    END
+
+    IDD_SEL_RENDERTAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 187
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 214
+    END
+
+    IDD_DONE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 72
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DATA
+//
+
+IDR_DATA_NO_PREVIEW     DATA                    "No_preview.gif"
+IDR_T0                  DATA                    "_0.gif"
+IDR_T3                  DATA                    "_3.gif"
+IDR_T5                  DATA                    "_5.gif"
+IDR_T7                  DATA                    "_7.gif"
+IDR_DATA_D3HHP          DATA                    "D3hhp.hhp"
+IDR_DATA_Q4HHP          DATA                    "Q4hhp.hhp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// HTML
+//
+
+IDR_HTML_INDEX          HTML                    "index.html"
+IDR_HTML_INDEX_Q4       HTML                    "index_q4.html"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,0,7,0
+ PRODUCTVERSION 0,0,7,0
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "D3MkEntityTree"
+            VALUE "FileVersion", "0, 0, 7, 0"
+            VALUE "InternalName", "Hdqrs.Program.5.Extra.D3MkEntityTree"
+            VALUE "LegalCopyright", "Written by kentaro-k.21"
+            VALUE "OriginalFilename", "D3MkEntityTree.exe"
+            VALUE "ProductName", "D3MkEntityTree"
+            VALUE "ProductVersion", "0, 0, 7, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_SEL_RENDERTAR DLGINIT
+BEGIN
+    IDC_COMBO_TAR, 0x403, 31, 0
+0x6e49, 0x6976, 0x6973, 0x6c62, 0x5f65, 0x6572, 0x646e, 0x7265, 0x7265, 
+0x2820, 0x7270, 0x6665, 0x7265, 0x6572, 0x2964, "\000" 
+    IDC_COMBO_TAR, 0x403, 28, 0
+0x6956, 0x6973, 0x6c62, 0x5f65, 0x6572, 0x646e, 0x7265, 0x7265, 0x2820, 
+0x6f70, 0x7373, 0x6269, 0x656c, 0x0029, 
+    IDC_COMBO_TAR, 0x403, 28, 0
+0x4757, 0x5f4c, 0x5241, 0x5f42, 0x6270, 0x6675, 0x6566, 0x2072, 0x7028, 
+0x6572, 0x6566, 0x7272, 0x6465, 0x0029, 
+    0
+END
+
+IDD_DIALOG_UI DLGINIT
+BEGIN
+    IDC_COMBO_GAMESEL, 0x403, 6, 0
+0x6f44, 0x6d6f, 0x0033, 
+    IDC_COMBO_GAMESEL, 0x403, 7, 0
+0x7551, 0x6b61, 0x3465, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_SAMPLE              BITMAP                  "Renderer.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "D3MkEntityTree"
+END
+
+#endif    // âpåÍ (ïƒçë) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

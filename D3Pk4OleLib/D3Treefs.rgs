@@ -1,0 +1,27 @@
+HKCR
+{
+	D3Pk4OleLib.D3Treefs.1 = s 'D3Treefs Class'
+	{
+		CLSID = s '{7866C00B-DB1B-4063-9C16-73F6DC1B868C}'
+	}
+	D3Pk4OleLib.D3Treefs = s 'D3Treefs Class'
+	{
+		CLSID = s '{7866C00B-DB1B-4063-9C16-73F6DC1B868C}'
+		CurVer = s 'D3Pk4OleLib.D3Treefs.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {7866C00B-DB1B-4063-9C16-73F6DC1B868C} = s 'D3Treefs Class'
+		{
+			ProgID = s 'D3Pk4OleLib.D3Treefs.1'
+			VersionIndependentProgID = s 'D3Pk4OleLib.D3Treefs'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{A999B85D-CCC7-4E69-A0CC-9C7A26CE2F81}'
+		}
+	}
+}

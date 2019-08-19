@@ -1,0 +1,484 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// ì˙ñ{åÍ resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\D3ModelExplorer.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // ì˙ñ{åÍ resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// âpåÍ (ïƒçë) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_TOOLS MENU 
+BEGIN
+    POPUP "0"
+    BEGIN
+        MENUITEM "Launch md5-renderer-0.1",     ID_CONTEXT_TOOL1
+        MENUITEM "Launch modelviewer",          ID_CONTEXT_TOOL2
+        MENUITEM "Launch ExKalibur",            ID_CONTEXT_TOOL3
+    END
+END
+
+IDR_MAINFRAME MENUEX 
+BEGIN
+    POPUP "&File",                          65535,MFT_STRING,MFS_ENABLED
+    BEGIN
+        MENUITEM "&Options...",                 32776,MFT_STRING,MFS_ENABLED
+        MENUITEM MFT_SEPARATOR
+        MENUITEM "The &viewers...",             32778,MFT_STRING,MFS_ENABLED
+        MENUITEM MFT_SEPARATOR
+        MENUITEM "E&xit",                       57665,MFT_STRING,MFS_ENABLED
+    END
+    POPUP "&View",                          65535,MFT_STRING,MFS_ENABLED
+    BEGIN
+        MENUITEM "&List",                       59410,MFT_STRING,MFS_ENABLED
+        MENUITEM "Lar&ge icon (thumbnail)",     59409,MFT_STRING,MFS_ENABLED
+    END
+    MENUITEM "&Update list",                ID_FILE_UPDATE,MFT_STRING,
+    MFS_ENABLED
+    MENUITEM "&About D3ModelExplorer...",   57664,
+    MFT_STRING | MFT_RIGHTJUSTIFY,MFS_ENABLED
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\D3ModelExplorer.ico"
+IDR_D3ModelExplorerTYPE ICON                    "res\\D3ModelExplorerDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "About D3ModelExplorer"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "D3ModelExplorer Rev.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Written by kentaro-k.21",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_OPTS DIALOGEX 0, 0, 260, 89
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Opts"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Your Doom 3 Installation:",IDC_STATIC,7,7,82,8
+    EDITTEXT        IDC_EDIT_DOOM3,7,16,213,16,ES_AUTOHSCROLL | NOT 
+                    WS_BORDER
+    PUSHBUTTON      "...",IDC_BUTTON_DOOM3,223,16,26,16,BS_FLAT
+    DEFPUSHBUTTON   "OK",IDOK,7,61,61,21,BS_FLAT
+    PUSHBUTTON      "Cancel",IDCANCEL,75,61,61,21,BS_FLAT
+END
+
+IDD_TOOLS DIALOGEX 0, 0, 399, 297
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "The viewers"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,331,7,61,21
+    PUSHBUTTON      "Cancel",IDCANCEL,331,33,61,21
+    CONTROL         "",IDC_TAB_TOOLS,"SysTabControl32",WS_TABSTOP,7,7,314,
+                    283
+END
+
+IDD_TOOL1 DIALOGEX 0, 0, 255, 260
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "md5-renderer-0.1"
+FONT 9, "MS UI Gothic", 0, 0, 0x0
+BEGIN
+    LTEXT           "The location of md5-renderer.py",IDC_STATIC,2,33,176,8
+    EDITTEXT        IDC_EDIT1,2,43,213,16,ES_AUTOHSCROLL | NOT WS_BORDER
+    PUSHBUTTON      "...",IDC_BUTTON1,218,43,21,16,BS_FLAT
+    LTEXT           "Stoopid Doom3 MD5 Renderer - First Attempt\r\nCopyright (C) 2004 Gil Megidish (gil at megidish dot net)",
+                    IDC_STATIC_CAPTION,2,2,251,20
+    PUSHBUTTON      "Check installation",IDC_BUTTON_TEST,2,71,64,21,BS_FLAT
+    CONTROL         "",IDC_RICHED_CREDITS,"RICHEDIT",TCS_VERTICAL | 
+                    TCS_BUTTONS | TCS_RAGGEDRIGHT | TCS_MULTISELECT | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP,2,99,237,149
+END
+
+IDD_TOOL2 DIALOGEX 0, 0, 267, 205
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "modelviewer"
+FONT 9, "MS UI Gothic", 0, 0, 0x0
+BEGIN
+    LTEXT           "Modelviewer for Doom3 Engine MD5MESH models (animated by a MD5ANIM), ",
+                    IDC_STATIC_CAPTION,2,2,264,20,SS_NOPREFIX
+    LTEXT           "Locate your ""modelviewer.exe""",IDC_STATIC,2,49,92,8
+    EDITTEXT        IDC_EDIT1,2,59,213,16,ES_AUTOHSCROLL | NOT WS_BORDER
+    PUSHBUTTON      "...",IDC_BUTTON1,222,59,23,16,BS_FLAT
+    LTEXT           "MD5 Modelviewer\r\nhttp://www.doom3world.org/phpbb2/viewtopic.php?t=1281",
+                    IDC_STATIC_LINK1,2,25,236,16
+    PUSHBUTTON      "Check installation",IDC_BUTTON_TEST,2,85,64,21,BS_FLAT
+    CONTROL         "",IDC_RICHED_CREDITS,"RICHEDIT",TCS_VERTICAL | 
+                    TCS_BUTTONS | TCS_RAGGEDRIGHT | TCS_MULTISELECT | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP,2,116,237,79
+END
+
+IDD_TOOL3 DIALOGEX 0, 0, 251, 212
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "ExKalibur"
+FONT 9, "MS UI Gothic", 0, 0, 0x0
+BEGIN
+    LTEXT           "ExKalibur v0.30 Final",IDC_STATIC_CAPTION,2,2,247,20,
+                    SS_NOPREFIX
+    LTEXT           "xKViewer.exe ",-1,2,57,42,8
+    EDITTEXT        IDC_EDIT1,2,67,213,16,ES_AUTOHSCROLL | NOT WS_BORDER
+    PUSHBUTTON      "...",IDC_BUTTON1,218,67,21,16,BS_FLAT
+    LTEXT           "ExKalibur Model Viewer\r\nhttp://www.doom3world.org/phpbb2/viewtopic.php?t=2305",
+                    IDC_STATIC_LINK1,2,29,210,20
+    PUSHBUTTON      "Check installation",IDC_BUTTON_TEST,2,96,64,21,BS_FLAT
+    CONTROL         "",IDC_RICHED_CREDITS,"RICHEDIT",TCS_VERTICAL | 
+                    TCS_BUTTONS | TCS_RAGGEDRIGHT | TCS_MULTISELECT | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP,2,125,237,79
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,0,1,0
+ PRODUCTVERSION 0,0,1,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "FileVersion", "0.0.1"
+            VALUE "InternalName", "D3ModelExplorer.exe"
+            VALUE "LegalCopyright", "Written by kentaro-k.21"
+            VALUE "OriginalFilename", "D3ModelExplorer.exe"
+            VALUE "ProductVersion", "0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_OPTS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 253
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 82
+    END
+
+    IDD_TOOLS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 392
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 290
+    END
+
+    IDD_TOOL1, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 253
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 259
+    END
+
+    IDD_TOOL2, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 266
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 200
+    END
+
+    IDD_TOOL3, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 250
+        TOPMARGIN, 2
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "D3ModelExplorer\n\nD3ModelExplorer\n\n\nD3ModelExplorer.Document\nD3ModelExplorer.Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "D3ModelExplorer"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_SMALLICON       "Display items by using small icons.\nSmall Icons"
+    ID_VIEW_LARGEICON       "Display items by using large icons.\nLarge Icons"
+    ID_VIEW_LIST            "Displays items in a list.\nList"
+    ID_VIEW_DETAILS         "Displays detailed information about each item in the window.\nDetails"
+    ID_VIEW_LINEUP          "Arranges icons in a grid."
+    ID_VIEW_BYNAME          "Sorts the icons alphabetically."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_AUTOARRANGE     "Arrange icons on a grid."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_OPTS             "Let me know your Doom 3 installation folder."
+    ID_APP_TOOLS            "Configure great viewers which can cooperative with!"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PROGRAM_VALID       "The viewer program seems to be valid."
+    IDS_PROGRAM_ABSENT      "The viewer may be absent.\n\nYou have to locate it!"
+    IDS_CHECK_FINE          "Check installation finished."
+    IDS_PYTHON_VALID        "Python seems to be valid."
+    IDS_PYTHON_ABSENT       "Need python!\n\nPlease install python at first."
+    IDS_PIL_ABSENT          "Need Python Image Library!\n\nPlease install PIL at first."
+    IDS_PIL_PRESENT         "Python Image Library seems to be valid."
+    IDS_PYOPENGL_PRESENT    "PyOpenGL seems to be valid."
+    IDS_PYOPENGL_ABSENT     "Need PyOpenGL and GLUT32.dll!\n\nPlease install PyOpenGL and GLUT32.dll."
+END
+
+#endif    // âpåÍ (ïƒçë) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\D3ModelExplorer.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

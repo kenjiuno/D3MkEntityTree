@@ -1,0 +1,45 @@
+// D3Pk4OleLib.idl : D3Pk4OleLib の IDL ソース
+//
+
+// このファイルは、タイプ ライブラリ (D3Pk4OleLib.tlb) およびマーシャリング コードを
+// 作成するために MIDL ツールによって処理されます。
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(1D7BF72B-5737-4BF1-A853-3435CCD6A99B),
+	dual,
+	nonextensible,
+	helpstring("ID3Treefs 0.0.0 Interface"),
+	pointer_default(unique)
+]
+interface ID3Treefs : IDispatch{
+	[id(1), helpstring("Method Close")] HRESULT Close(void);
+	[id(2), helpstring("Method Addfs")] HRESULT Addfs(BSTR PathName, [out, retval] VARIANT_BOOL *ReturnVal);
+	[id(3), helpstring("Method GetListfs")] HRESULT GetListfs([out,retval] VARIANT* ReturnVal);
+	[id(4), helpstring("Method SelectFile")] HRESULT SelectFile(BSTR PathName, [out,retval] VARIANT_BOOL* ReturnVal);
+	[propget, id(5), helpstring("Property File")] HRESULT File([out, retval] BSTR* pVal);
+	[propget, id(6), helpstring("Property FileSize")] HRESULT FileSize([out, retval] LONG* pVal);
+	[propget, id(7), helpstring("Property FileData")] HRESULT FileData([out, retval] VARIANT* pVal);
+	[propget, id(8), helpstring("Property FileTime")] HRESULT FileTime([out, retval] DATE* pVal);
+	[propget, id(9), helpstring("Property FileDataAsText")] HRESULT FileDataAsText([out, retval] BSTR* pVal);
+};
+[
+	uuid(A999B85D-CCC7-4E69-A0CC-9C7A26CE2F81),
+	version(1.0),
+	helpstring("D3Pk4OleLib 0.0.0 Type library")
+]
+library D3Pk4OleLibLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(7866C00B-DB1B-4063-9C16-73F6DC1B868C),
+		helpstring("D3Treefs 0.0.0 Class")
+	]
+	coclass D3Treefs
+	{
+		[default] interface ID3Treefs;
+	};
+};

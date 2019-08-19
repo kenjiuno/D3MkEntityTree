@@ -1,0 +1,17 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=Something_in_Doom_3.chm
+Contents file=D3hhp.hhc
+Default Font=MS Sans Serif,9,0
+Default topic=index.html
+Display compile progress=No
+Full-text search=Yes
+Index file=D3hhp.hhk
+Language=0x809
+Title=Something in Doom 3
+
+[FILES]
+index.html
+%FILES_HERE%
+
+[INFOTYPES]

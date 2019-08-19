@@ -1,0 +1,18 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=Something_in_Q4.chm
+Contents file=Q4hhp.hhc
+Default Font=MS Sans Serif,9,0
+Default topic=index.html
+Display compile progress=No
+Full-text search=Yes
+Index file=Q4hhp.hhk
+Language=0x809
+Title=Something in Q4
+
+[FILES]
+index.html
+
+
+
+[INFOTYPES]
