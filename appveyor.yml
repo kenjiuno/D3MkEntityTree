@@ -1,0 +1,12 @@
+build:
+  project: D3MkEntityTree.sln
+
+branches:
+  only:
+  - master
+
+skip_tags: true
+
+skip_non_tags: true
+
+image: "Visual Studio 2015"
