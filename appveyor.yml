@@ -7,6 +7,4 @@ branches:
 
 skip_tags: true
 
-skip_non_tags: true
-
 image: "Visual Studio 2015"
