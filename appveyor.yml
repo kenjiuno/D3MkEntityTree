@@ -7,4 +7,8 @@ branches:
 
 skip_tags: true
 
+platform: "Any CPU"
+
+configuration: "Release"
+
 image: "Visual Studio 2015"
