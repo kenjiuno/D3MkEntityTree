@@ -31,7 +31,7 @@ CCustRichEditCtrl::~CCustRichEditCtrl()
 BEGIN_MESSAGE_MAP(CCustRichEditCtrl, CRichEditCtrl)
 	//{{AFX_MSG_MAP(CCustRichEditCtrl)
 	//}}AFX_MSG_MAP
-#if (_MFC_VER == 0x0710)
+#if (_MFC_VER >= 0x0710)
 	ON_NOTIFY_REFLECT(EN_LINK, (void (CCmdTarget::* )(NMHDR *,LRESULT *))OnLink)
 #else
 	ON_NOTIFY_REFLECT(EN_LINK, OnLink)

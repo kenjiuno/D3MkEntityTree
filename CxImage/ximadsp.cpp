@@ -1799,7 +1799,8 @@ bool CxImage::UnsharpMask(float radius /*= 5.0*/, float amount /*= 0.5*/, int th
 
 	dbScaler = 33.3/head.biWidth;
 
-	for (int x=0;x<head.biWidth;x++)
+	int x;
+	for (x=0;x<head.biWidth;x++)
 	{
 		if (info.nEscape) break;
 		info.nProgress = (long)(33.3+x*dbScaler);
@@ -1825,7 +1826,7 @@ bool CxImage::UnsharpMask(float radius /*= 5.0*/, float amount /*= 0.5*/, int th
 	
 	// merge the source and destination (which currently contains
 	// the blurred version) images
-    for (y=0;y<head.biHeight;y++)
+    for (int y=0;y<head.biHeight;y++)
 	{
 		if (info.nEscape) break;
 		info.nProgress = (long)(66.6+y*dbScaler);

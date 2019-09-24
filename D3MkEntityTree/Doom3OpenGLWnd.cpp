@@ -1067,8 +1067,8 @@ void CDoom3OpenGLWnd::PrecacheTexsh(CString strName)
 		//
 		GLsizei cx = aIma.cx;
 		GLsizei cy = aIma.cy;
-		GLsizei cxNew = _cpp_min(256, _cpp_min(cxMax, computeNextPow2(cx)));
-		GLsizei cyNew = _cpp_min(256, _cpp_min(cxMax, computeNextPow2(cy)));
+		GLsizei cxNew = (std::min)(256, (std::min)(cxMax, computeNextPow2(cx)));
+		GLsizei cyNew = (std::min)(256, (std::min)(cxMax, computeNextPow2(cy)));
 
 		GLvoid *pvIma = aIma.pData;
 

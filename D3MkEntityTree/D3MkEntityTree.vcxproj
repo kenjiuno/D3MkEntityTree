@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4BF88307-699D-4B8D-99A5-7249A61D0661}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <UseOfAtl>false</UseOfAtl>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <UseOfAtl>false</UseOfAtl>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>16.0.28707.177</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>Debug\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../CxImage;./XHyperLink_demo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CONTEXT_EXPORT_FEATURE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)D3MkEntityTree.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)D3MkEntityTree.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../CxImage;./XHyperLink_demo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CONTEXT_EXPORT_FEATURE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
+      <OutputFile>$(OutDir)D3MkEntityTree.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AboutDlg.cpp" />
+    <ClCompile Include="CheckMarkedTreeCtrl.cpp" />
+    <ClCompile Include="Context.cpp" />
+    <ClCompile Include="CustRichEditCtrl.cpp" />
+    <ClCompile Include="D3MkEntityTree.cpp" />
+    <ClCompile Include="DM2RPtr.cpp" />
+    <ClCompile Include="DoneDlg.cpp" />
+    <ClCompile Include="Doom3OpenGLWnd.cpp" />
+    <ClCompile Include="ExpDlg.cpp" />
+    <ClCompile Include="ExtBM.cpp" />
+    <ClCompile Include="GLExtz.cpp" />
+    <ClCompile Include="GUID.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="My3DMath.cpp" />
+    <ClCompile Include="OSP.cpp" />
+    <ClCompile Include="OutDeb.cpp" />
+    <ClCompile Include="ProfStr.cpp" />
+    <ClCompile Include="ProfStr1.cpp" />
+    <ClCompile Include="RCI.cpp" />
+    <ClCompile Include="SelEntityDefDlg.cpp" />
+    <ClCompile Include="SelRendererTarDlg.cpp" />
+    <ClCompile Include="SizeVuff.cpp" />
+    <ClCompile Include="Sol.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Structure.cpp" />
+    <ClCompile Include="Uzz.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../unZip;../zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../unZip;../zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="WaitNowDlg.cpp" />
+    <ClCompile Include="WGLExtAhh.cpp" />
+    <ClCompile Include="XHyperLink_demo\XHyperLink.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AboutDlg.h" />
+    <ClInclude Include="CheckMarkedTreeCtrl.h" />
+    <ClInclude Include="Context.h" />
+    <ClInclude Include="CustRichEditCtrl.h" />
+    <ClInclude Include="D3MkEntityTree.h" />
+    <ClInclude Include="DM2RPtr.h" />
+    <ClInclude Include="DoneDlg.h" />
+    <ClInclude Include="Doom3ControlContext.h" />
+    <ClInclude Include="Doom3OpenGLWnd.h" />
+    <ClInclude Include="Doom3RP.h" />
+    <ClInclude Include="ExpDlg.h" />
+    <ClInclude Include="ExtBM.h" />
+    <ClInclude Include="GLExtz.h" />
+    <ClInclude Include="MemVuff.h" />
+    <ClInclude Include="My3DMath.h" />
+    <ClInclude Include="NoMemberwiseCopy.h" />
+    <ClInclude Include="OSP.h" />
+    <ClInclude Include="OutDeb.h" />
+    <ClInclude Include="ProfStr.h" />
+    <ClInclude Include="ProfStr1.h" />
+    <ClInclude Include="RCI.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SelEntityDefDlg.h" />
+    <ClInclude Include="SelRendererTarDlg.h" />
+    <ClInclude Include="SizeVuff.h" />
+    <ClInclude Include="Sol.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Structure.h" />
+    <ClInclude Include="Uzz.h" />
+    <ClInclude Include="WaitNowDlg.h" />
+    <ClInclude Include="WGLExtAhh.h" />
+    <ClInclude Include="XHyperLink_demo\XHyperLink.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="No_preview.gif" />
+    <Image Include="Renderer.bmp" />
+    <Image Include="_0.gif" />
+    <Image Include="_3.gif" />
+    <Image Include="_5.gif" />
+    <Image Include="_7.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="D3MkEntityTree.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="About.rtf" />
+    <None Include="D3hhp.hhp" />
+    <None Include="index.html" />
+    <None Include="index_q4.html" />
+    <None Include="Q4hhp.hhp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CreditsNote.txt" />
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CxImage\cximage.vcxproj">
+      <Project>{87a0fb99-7849-4d0b-9b79-5b66d15c2c47}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\unZip\unZip.vcxproj">
+      <Project>{0c258900-2f14-479c-8f53-e103b9ea0239}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="D3MkEntityTree.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

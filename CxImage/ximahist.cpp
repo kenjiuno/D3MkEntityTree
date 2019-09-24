@@ -103,7 +103,7 @@ bool CxImage::HistogramStretch(long method)
 		}
 	} else lut[minc] = minc;
 
-	for (y=0; y<head.biHeight; y++)	{
+	for (long y=0; y<head.biHeight; y++)	{
 		if (info.nEscape) break;
 		info.nProgress = (long)(50.0+y*dbScaler);
 		for (long x=0; x<head.biWidth; x++)
@@ -153,7 +153,7 @@ bool CxImage::HistogramStretch(long method)
 		// normalize image
 		double dbScaler = 100.0/head.biHeight;
 
-		for (y=0; y<head.biHeight; y++)	{
+		for (long y=0; y<head.biHeight; y++)	{
 			if (info.nEscape) break;
 			info.nProgress = (long)(y*dbScaler);
 
@@ -227,7 +227,7 @@ bool CxImage::HistogramStretch(long method)
 		// normalize image
 		double dbScaler = 100.0/head.biHeight;
 
-		for (y=0; y<head.biHeight; y++)
+		for (long y=0; y<head.biHeight; y++)
 		{
 			info.nProgress = (long)(y*dbScaler);
 			if (info.nEscape) break;

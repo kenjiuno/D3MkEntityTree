@@ -63,7 +63,7 @@ int _D3MkEntityTree()
 		getchar();
 		return 0;
 	}
-	if (1) {
+	if (0) {
 		FILE *f1 = fopen("C:\\imp\\imp.md5mesh", "rb");
 		static BYTE buff1[1024*1024];
 		size_t r1 = fread(buff1, 1, 1024*1024, f1);
