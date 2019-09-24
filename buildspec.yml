@@ -7,7 +7,7 @@ env:
 phases:
   build:
     commands:
-      - '& "C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe" $env:SOLUTION /p:Configuration="Release|Win32"'
+      - '& "C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe" $env:SOLUTION /p:Configuration="Release" /p:Platform="Win32"'
 artifacts:
   files:
     - .\D3MkEntityTree\bin\Debug\*
